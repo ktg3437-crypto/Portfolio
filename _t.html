@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><link rel="stylesheet" href="css/style.css"></head>
+<body><section id="work"><div class="filters" id="filters"><button class="filter active" data-filter="all">전체</button></div>
+<div class="work-grid" id="workGrid"></div></section>
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop" data-close></div>
+<div class="modal-dialog"><button class="modal-close" data-close>×</button>
+<div class="modal-content" id="modalContent"></div></div></div>
+<script src="js/main.js"></script>
+<script>setTimeout(()=>{var cards=document.querySelectorAll('.work-card');
+// click the 병원 21주년 card
+for(const c of cards){ if(c.querySelector('.work-card-title').textContent.includes('21주년')){c.click();break;} }
+},1000);</script></body></html>
