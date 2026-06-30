@@ -1,11 +1,15 @@
 // ===== State =====
 let works = [];
 let activeFilter = 'all';
+const featuredOrder = ['dalidam'];
 
 const grid = document.getElementById('workGrid');
 const filtersEl = document.getElementById('filters');
 const modal = document.getElementById('modal');
 const modalContent = document.getElementById('modalContent');
+const activityGrid = document.querySelector('.activity-grid');
+const activityPrev = document.querySelector('[data-activity-prev]');
+const activityNext = document.querySelector('[data-activity-next]');
 
 // ===== Load data =====
 fetch('data/works.json')
@@ -21,9 +25,18 @@ fetch('data/works.json')
 
 // ===== Render grid =====
 function renderGrid() {
-  const list = activeFilter === 'all'
+  const list = (activeFilter === 'all'
     ? works
-    : works.filter((w) => w.category === activeFilter);
+    : works.filter((w) => w.category === activeFilter))
+    .slice()
+    .sort((a, b) => {
+      const aIndex = featuredOrder.indexOf(a.id);
+      const bIndex = featuredOrder.indexOf(b.id);
+      if (aIndex === -1 && bIndex === -1) return 0;
+      if (aIndex === -1) return 1;
+      if (bIndex === -1) return -1;
+      return aIndex - bIndex;
+    });
 
   grid.innerHTML = list.map((w) => `
     <article class="work-card" data-id="${w.id}">
@@ -53,6 +66,26 @@ filtersEl.addEventListener('click', (e) => {
   filtersEl.querySelectorAll('.filter').forEach((b) => b.classList.toggle('active', b === btn));
   renderGrid();
 });
+
+if (activityGrid && activityPrev && activityNext) {
+  const updateActivityButtons = () => {
+    const maxScroll = activityGrid.scrollWidth - activityGrid.clientWidth - 2;
+    activityPrev.disabled = activityGrid.scrollLeft <= 2;
+    activityNext.disabled = activityGrid.scrollLeft >= maxScroll;
+  };
+
+  const scrollActivities = (direction) => {
+    const card = activityGrid.querySelector('.activity-card');
+    const distance = card ? card.getBoundingClientRect().width + 18 : activityGrid.clientWidth * 0.8;
+    activityGrid.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  };
+
+  activityPrev.addEventListener('click', () => scrollActivities(-1));
+  activityNext.addEventListener('click', () => scrollActivities(1));
+  activityGrid.addEventListener('scroll', updateActivityButtons, { passive: true });
+  window.addEventListener('resize', updateActivityButtons);
+  updateActivityButtons();
+}
 
 // ===== Open modal (event delegation on grid) =====
 grid.addEventListener('click', (e) => {
