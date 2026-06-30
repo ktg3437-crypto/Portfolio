@@ -163,11 +163,11 @@ body {
 /* ===== Activities ===== */
 .activity-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-  align-items: stretch; grid-auto-rows: 1fr;
+  align-items: start;
 }
 .activity-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
-  min-height: 520px; display: flex; flex-direction: column;
+  display: flex; flex-direction: column;
 }
 .activity-period { font-size: 13px; font-weight: 700; color: var(--gray); margin-bottom: 10px; }
 .activity-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
@@ -209,7 +209,7 @@ body {
   margin-top: 7px; color: var(--gray); font-size: 12px; line-height: 1.55;
 }
 .activity-artifact {
-  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line);
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);
 }
 .activity-artifact-label {
   margin-bottom: 8px; font-size: 12px; font-weight: 800; letter-spacing: .5px;
