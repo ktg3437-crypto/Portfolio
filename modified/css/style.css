@@ -216,7 +216,8 @@ body {
   color: var(--navy);
 }
 .activity-video {
-  width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover;
+  width: 100%; max-width: 280px; aspect-ratio: 16 / 9; display: block; object-fit: cover;
+  margin: 0 auto;
   background: #111; border: 1px solid var(--line); border-radius: 8px;
 }
 .activity-proposal-strip {
@@ -228,6 +229,29 @@ body {
 .proposal-group-title {
   margin-bottom: 8px; color: var(--gray); font-size: 12px; font-weight: 800;
 }
+.proposal-summary {
+  display: grid; grid-template-columns: 58px 1fr; gap: 10px;
+  align-items: center; padding: 8px; border: 1px solid var(--line);
+  border-radius: 8px; background: #fff; cursor: pointer;
+}
+.proposal-summary::-webkit-details-marker { display: none; }
+.proposal-summary::after {
+  content: "펼치기"; justify-self: end; color: var(--gray);
+  font-size: 11px; font-weight: 800;
+}
+.proposal-group[open] .proposal-summary::after { content: "접기"; }
+.proposal-summary img {
+  width: 58px; aspect-ratio: 4 / 3; object-fit: cover;
+  border: 1px solid var(--line); border-radius: 6px; background: #fff;
+}
+.proposal-summary strong {
+  display: block; color: var(--ink); font-size: 13px; line-height: 1.35;
+}
+.proposal-summary em {
+  display: block; margin-top: 2px; color: var(--gray);
+  font-style: normal; font-size: 11px; font-weight: 700;
+}
+.proposal-group[open] .activity-proposal-strip { margin-top: 10px; }
 .activity-proposal-strip a {
   flex: 0 0 88px; width: 88px; aspect-ratio: 3 / 4; object-fit: cover;
   display: block; scroll-snap-align: start;
