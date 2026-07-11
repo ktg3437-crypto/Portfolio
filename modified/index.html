@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>김태경 · 콘텐츠 마케터 포트폴리오</title>
   <meta name="description" content="콘텐츠로 사람을 움직이는 마케터 김태경 포트폴리오">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search).get('theme');
+      var saved = p || localStorage.getItem('theme');
+      var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      if (dark) document.documentElement.classList.add('dark');
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css?v=20260630-activities2">
 </head>
 <body>
@@ -17,66 +26,57 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">portfolio <span class="nav-logo-sub">Content Marketer</span></a>
       <nav class="nav-links">
-        <a href="#about">소개</a>
+        <a href="#hero">소개</a>
         <a href="#work">작업물</a>
         <a href="#career">경력</a>
         <a href="#contact">연락처</a>
       </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="다크모드 전환">◐</button>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (About 흡수) -->
   <section id="hero" class="hero">
     <div class="container hero-inner">
-      <p class="hero-eyebrow">콘텐츠 마케터 · 김태경</p>
-      <h1 class="hero-title">사람을 <span class="accent">움직이는</span> 콘텐츠</h1>
-      <p class="hero-sub">문제를 정의하고 데이터로 콘셉트를 잡은 뒤, 디자인·영상까지 직접 구현하는 콘텐츠 마케터.</p>
-      <ul class="hero-stats">
-        <li><strong>데이터 기반 기획</strong><span>설문·반응 분석 → 전략</span></li>
-        <li><strong>공모전 수상</strong><span>대한상공회의소장상</span></li>
-        <li><strong>기획+디자인</strong><span>Ps·Ai·캐러셀 제작</span></li>
-        <li><strong>영양사 면허</strong><span>F&amp;B 차별화 시각</span></li>
+      <p class="hero-eyebrow">Content Marketer · 김태경</p>
+      <h1 class="hero-title">기획하고, 분석해서<br>사람을 움직이는 콘텐츠</h1>
+      <div class="hero-badge">🏆 우수사례 공모전 청년영상부문 장려상</div>
+      <div class="hero-about">
+        <img class="hero-photo" src="assets/images/profile.jpg" alt="김태경 프로필 사진">
+        <div class="hero-about-text">
+          <p class="hero-quote">"보는 콘텐츠에서 끝내지 않고, 행동으로 잇습니다."</p>
+          <p class="hero-sub">문제를 정의하고 <strong>데이터로 타깃과 콘셉트를 설계하는 기획</strong>에 강합니다. 세운 전략을 카드뉴스·배너·영상 등 <strong>실제 디자인 산출물로 직접 구현</strong>하고, 결과를 다시 다음 기획에 반영합니다.</p>
+          <p class="hero-edu">부경대학교 식품영양학과 졸업 · 영양사 면허</p>
+        </div>
+      </div>
+      <ul class="hero-strengths">
+        <li><strong>전략적 기획력</strong><span>문제 정의부터 타깃·콘셉트 설계까지, 설문·반응 분석으로 방향을 검증</span></li>
+        <li><strong>기획-디자인 풀사이클</strong><span>전략을 촬영·편집·배너·캐러셀 디자인까지 직접 실행해 완결</span></li>
+        <li><strong>F&amp;B 전문성</strong><span>식품영양학 전공·영양사 면허로 라벨·성분을 읽는 차별화된 시각</span></li>
       </ul>
       <a href="#work" class="hero-cta">작업물 보기 ↓</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section">
+  <!-- Work -->
+  <section id="work" class="section">
     <div class="container">
-      <p class="section-label">ABOUT</p>
-      <h2 class="section-title">기획으로 증명하는 콘텐츠 마케터</h2>
-      <div class="about-grid">
-        <div class="about-photo">
-          <img src="assets/images/profile.jpg" alt="김태경 프로필 사진">
-          <p class="about-name">김태경 <span>부경대학교 식품영양학과 졸업 · 영양사 면허</span></p>
-        </div>
-        <div class="about-info">
-          <p class="about-quote">"보는 콘텐츠에서 끝내지 않고, 행동으로 잇습니다."</p>
-          <p class="about-text">문제를 정의하고 <strong>데이터로 타깃과 콘셉트를 설계하는 기획</strong>에 강합니다. 세운 전략을 카드뉴스·배너·영상 등 <strong>실제 디자인 산출물로 직접 구현</strong>하고, 결과를 다시 다음 기획에 반영합니다.</p>
-          <ul class="about-strengths">
-            <li>
-              <strong>전략적 기획력</strong>
-              문제 정의부터 타깃·콘셉트 설계까지, 설문·반응 분석으로 방향을 검증하는 기획
-            </li>
-            <li>
-              <strong>기획-디자인 풀사이클</strong>
-              세운 전략을 촬영·편집·배너·캐러셀 디자인까지 직접 실행해 완결하는 실행력
-            </li>
-            <li>
-              <strong>F&amp;B 전문성</strong>
-              식품영양학 전공·영양사 면허로 라벨·성분을 읽는 차별화된 시각
-            </li>
-          </ul>
-        </div>
+      <p class="section-label">01 — WORK</p>
+      <h2 class="section-title">대표 작업물</h2>
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="all">전체</button>
+        <button class="filter" data-filter="video">영상</button>
+        <button class="filter" data-filter="sns">SNS</button>
+        <button class="filter" data-filter="branding">브랜드 기획</button>
       </div>
+      <div class="work-grid" id="workGrid"><!-- JS renders cards --></div>
     </div>
   </section>
 
   <!-- Process -->
   <section id="process" class="section">
     <div class="container">
-      <p class="section-label">HOW I WORK</p>
+      <p class="section-label">02 — HOW I WORK</p>
       <h2 class="section-title">기획하는 방식</h2>
       <ol class="process">
         <li class="process-step">
@@ -108,25 +108,10 @@
     </div>
   </section>
 
-  <!-- Work -->
-  <section id="work" class="section section-alt">
-    <div class="container">
-      <p class="section-label">WORK</p>
-      <h2 class="section-title">대표 작업물</h2>
-      <div class="filters" id="filters">
-        <button class="filter active" data-filter="all">전체</button>
-        <button class="filter" data-filter="video">영상</button>
-        <button class="filter" data-filter="sns">SNS</button>
-        <button class="filter" data-filter="branding">브랜드 기획</button>
-      </div>
-      <div class="work-grid" id="workGrid"><!-- JS renders cards --></div>
-    </div>
-  </section>
-
   <!-- Career -->
   <section id="career" class="section">
     <div class="container">
-      <p class="section-label">CAREER</p>
+      <p class="section-label">03 — CAREER</p>
       <h2 class="section-title">경력</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -142,18 +127,6 @@
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-period">2020.04 – 2021.02</div>
-          <div class="timeline-body">
-            <h3>YC College (영어학원) 마케팅팀</h3>
-            <p class="timeline-role">콘텐츠 마케터 / 11개월</p>
-            <div class="activity-tags">
-              <span>#콘텐츠마케팅</span>
-              <span>#성과분석</span>
-            </div>
-            <p class="career-summary">학원 마케팅팀에서 블로그·인스타그램 운영, SNS 광고 관리, 배너·카피 제작을 담당했습니다. 교육 서비스의 신뢰도를 높이는 후기·경험 기반 콘텐츠 운영을 경험했습니다.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
           <div class="timeline-period">2022.04 – 2023.01</div>
           <div class="timeline-body">
             <h3>에스바디워크필라테스</h3>
@@ -165,14 +138,26 @@
             <p class="career-summary">필라테스 센터에서 블로그·SNS 운영, 체험단 관리, 회원 이벤트와 홍보 배너 제작을 맡았습니다. 상담 업무를 병행하며 현장 고객 반응을 가까이에서 파악하고 홍보 콘텐츠에 반영했습니다.</p>
           </div>
         </div>
+        <div class="timeline-item">
+          <div class="timeline-period">2020.04 – 2021.02</div>
+          <div class="timeline-body">
+            <h3>YC College (영어학원) 마케팅팀</h3>
+            <p class="timeline-role">콘텐츠 마케터 / 11개월</p>
+            <div class="activity-tags">
+              <span>#콘텐츠마케팅</span>
+              <span>#성과분석</span>
+            </div>
+            <p class="career-summary">학원 마케팅팀에서 블로그·인스타그램 운영, SNS 광고 관리, 배너·카피 제작을 담당했습니다. 교육 서비스의 신뢰도를 높이는 후기·경험 기반 콘텐츠 운영을 경험했습니다.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Activities -->
-  <section id="activities" class="section section-alt">
+  <section id="activities" class="section">
     <div class="container">
-      <p class="section-label">ACTIVITIES</p>
+      <p class="section-label">04 — ACTIVITIES &amp; SKILLS</p>
       <h2 class="section-title">인턴 · 대외활동</h2>
       <div class="activity-controls" aria-label="인턴 · 대외활동 카드 이동">
         <button class="activity-nav" type="button" data-activity-prev aria-label="이전 활동 보기">‹</button>
@@ -302,15 +287,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="container">
-      <p class="section-label">SKILLS</p>
-      <h2 class="section-title">역량 · 자격 · 어학</h2>
-      <div class="skills-block">
+      <div class="skills-block" id="skills">
         <div class="skills-group">
           <h3>핵심 역량</h3>
           <div class="tags">
@@ -347,10 +324,10 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section section-dark">
+  <section id="contact" class="section">
     <div class="container contact-inner">
-      <p class="section-label light">CONTACT</p>
-      <h2 class="section-title light">콘텐츠를 통해 브랜드와 고객을<br><span class="accent">연결</span>하는 마케터로 성장하겠습니다.</h2>
+      <p class="section-label">05 — CONTACT</p>
+      <h2 class="section-title">콘텐츠를 통해 브랜드와 고객을<br><span class="accent">연결</span>하는 마케터로 성장하겠습니다.</h2>
       <div class="contact-links">
         <a href="mailto:s208404@naver.com">✉ s208404@naver.com</a>
         <a href="https://www.instagram.com/soft_day_365" target="_blank" rel="noopener">Instagram ↗</a>
