@@ -103,6 +103,7 @@ a:focus-visible, button:focus-visible {
   padding: 8px 18px; font-size: 14px; font-weight: 600;
 }
 .hero-about { display: flex; gap: 32px; align-items: center; margin-top: 40px; }
+.hero-about-text { min-width: 0; }
 .hero-photo {
   flex: 0 0 120px; width: 120px; height: 120px; object-fit: cover;
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -143,6 +144,7 @@ a:focus-visible, button:focus-visible {
   font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800;
   letter-spacing: -.02em; line-height: 1.2;
 }
+.accent { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 
 /* ===== Work ===== */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
@@ -367,7 +369,7 @@ a:focus-visible, button:focus-visible {
 
 /* ===== Footer ===== */
 .footer {
-  padding: 32px 24px; text-align: center;
+  padding: 32px 0; text-align: center;
   font-size: 13px; color: var(--muted-foreground);
   border-top: 1px solid var(--border);
 }
@@ -482,7 +484,7 @@ a:focus-visible, button:focus-visible {
   .nav-inner { padding: 0 20px; }
   .section { padding: 64px 0; }
   .hero { padding: 104px 0 64px; }
-  .hero-about { flex-direction: column; align-items: flex-start; }
+  .hero-about { flex-direction: column; align-items: stretch; }
   .hero-strengths { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .process { grid-template-columns: 1fr; }
@@ -493,6 +495,6 @@ a:focus-visible, button:focus-visible {
   .activity-controls { margin: 0 0 14px; justify-content: flex-start; }
   .activity-card { flex-basis: 86vw; height: 520px; padding: 20px; }
   .activity-work-list { grid-template-columns: 1fr; }
-  .modal-dialog { margin: 0; min-height: 100vh; border-radius: 0; padding: 32px 20px; }
+  .modal-dialog { margin: 0; min-height: 100vh; border-radius: 0; padding: 20px; }
   .modal-title { font-size: 22px; }
 }
