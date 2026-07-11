@@ -1,5 +1,65 @@
 [
   {
+    "id": "nongshim-caprisun",
+    "title": "농심 카프리썬 '다컸썬' 캠페인 기획",
+    "subtitle": "카프리썬 성인 타깃 확장 마케팅 · 농심 공모전 출품작",
+    "category": "branding",
+    "categoryLabel": "브랜드 기획",
+    "period": "팀 공모전 · 탈탈 탈곡기(2인) · 2026",
+    "role": "설문 설계·데이터 분석 · 캠페인 동선 설계 · 기획서 제작",
+    "tags": ["#타깃확장", "#데이터기반기획", "#밈마케팅", "#공모전출품"],
+    "contribution": "설문 설계·분석부터 캠페인 구조 설계, 6페이지 기획서 구성·제작까지 주도 (2인 팀)",
+    "context": "카프리썬은 '어린이 음료'라는 인식에 갇혀 있지만, 그 파우치를 쥐고 자란 세대는 이미 성인이 되었습니다. '다 컸는데 왜 못 마셔?'라는 질문에서 출발해 20~30대로 타깃을 확장하는 캠페인을 설계한 공모전 출품작입니다.",
+    "summary": [
+      { "label": "문제", "text": "인지 93.8%인데 성인이 집어들 '명분'이 없는 브랜드" },
+      { "label": "기획", "text": "자체 설문(n=64) 기반 '다컸썬' 3단 캠페인 동선 설계" },
+      { "label": "결과", "text": "6페이지 기획서 완성 · 농심 공모전 출품" }
+    ],
+    "insights": [
+      "자체 설문(n=64): 브랜드 인지 93.8%, '추억의 음료' 87.5% — 문제는 인지가 아니라 구매 명분",
+      "성인 대상 마케팅에 긍정·흥미 89.1%, 밈·병맛 콘텐츠 선호 1위 54.7%",
+      "주 구매 채널 편의점 67.2%, 추억 자극 시 실구매 의향 60.9%, 무료 시음 참여 의향 68.8%"
+    ],
+    "approach": [
+      {
+        "decision": "'다컸썬' — 다 큰 어른을 위한 카프리썬이라는 밈형 캠페인 네이밍",
+        "why": "인지도가 이미 93.8%라 '알리는 광고'가 아니라 성인이 집어들 명분을 만드는 것이 과제라고 판단"
+      },
+      {
+        "decision": "밈 콘텐츠(온라인) → 급수대 팝업 시음(경험) → 편의점 프로모션(구매)의 3단 동선",
+        "why": "밈이 명분을 만들고, 급수대가 첫 모금의 추억을 되살리고, 편의점이 구매로 닫는 구조 — 설문의 채널(67.2%)·시음(68.8%) 데이터를 동선에 그대로 반영"
+      },
+      {
+        "decision": "모든 기획 판단을 자체 설문 수치로 뒷받침하는 데이터 우선 구성",
+        "why": "신입 팀의 기획서일수록 감이 아닌 근거로 설득해야 한다고 판단, 설문 설계부터 직접 수행"
+      }
+    ],
+    "workflow": [
+      "카프리썬 브랜드·시장 리서치 → 타깃 확장 과제 정의",
+      "20~30대 대상 자체 설문 설계·수집 (n=64) 및 교차 분석",
+      "'다컸썬' 캠페인 콘셉트·네이밍·3단 실행 동선 설계",
+      "키비주얼 시안 제작(AI 활용) 및 6페이지 기획서 구성·디자인",
+      "제출 규격(PDF 6p)에 맞춰 최종본 완성·출품"
+    ],
+    "impact": [
+      "설문 설계→분석→캠페인 설계→기획서 제작 전 과정을 팀 자체 수행한 데이터 기반 기획 완결",
+      "농심 공모전 정식 출품 완료 (결과 발표 대기)"
+    ],
+    "result": "자체 설문(n=64) 기반 타깃 확장 캠페인 '다컸썬' 기획·출품",
+    "tools": ["Google Forms", "Claude Code", "Higgsfield", "PowerPoint"],
+    "gallery": [
+      "assets/images/nongshim-caprisun/nongshim-caprisun-1.png",
+      "assets/images/nongshim-caprisun/nongshim-caprisun-2.png",
+      "assets/images/nongshim-caprisun/nongshim-caprisun-3.png",
+      "assets/images/nongshim-caprisun/nongshim-caprisun-4.png",
+      "assets/images/nongshim-caprisun/nongshim-caprisun-5.png",
+      "assets/images/nongshim-caprisun/nongshim-caprisun-6.png"
+    ],
+    "galleryLabel": "기획서 전체 보기 (6p)",
+    "link": "",
+    "thumb": "assets/images/nongshim-caprisun/nongshim-caprisun-1.png"
+  },
+  {
     "id": "cleau-sunstick",
     "title": "Cleau 선스틱 브랜드 광고 영상",
     "subtitle": "다이소 선스틱 리브랜딩 · AI 기반 브랜드 광고 제작",

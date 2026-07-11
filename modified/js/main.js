@@ -1,7 +1,7 @@
 // ===== State =====
 let works = [];
 let activeFilter = 'all';
-const featuredOrder = ['dalidam'];
+const featuredOrder = ['nongshim-caprisun', 'dalidam'];
 
 const grid = document.getElementById('workGrid');
 const filtersEl = document.getElementById('filters');
@@ -51,8 +51,9 @@ function renderGrid() {
         <h3 class="work-card-title">${w.title}</h3>
       </div>
       <div class="work-card-body">
-        <p class="work-card-sub">${w.subtitle}</p>
-        <p class="work-card-result">${w.result}</p>
+        ${w.summary && w.summary.length ? `<ul class="work-card-summary">${w.summary.map((s) => `<li><span>${s.label}</span>${s.text}</li>`).join('')}</ul>`
+        : `<p class="work-card-sub">${w.subtitle}</p>
+        <p class="work-card-result">${w.result}</p>`}
       </div>
     </article>
   `).join('');
