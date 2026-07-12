@@ -311,7 +311,7 @@ a:focus-visible, button:focus-visible {
 }
 .activity-video {
   width: 100%; max-width: 280px; aspect-ratio: 16 / 9; display: block; margin: 0 auto;
-  object-fit: cover; background: #000;
+  object-fit: cover; background: #000; /* 레터박스: 테마 무관 항상 검정 (스펙 토큰 예외) */
   border: 1px solid var(--border); border-radius: var(--radius);
 }
 .proposal-group { margin-top: 10px; }
