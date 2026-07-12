@@ -195,8 +195,31 @@ modal.addEventListener('click', (e) => {
   if (e.target.hasAttribute('data-close')) closeModal();
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  if (e.key !== 'Escape') return;
+  if (lightbox.classList.contains('open')) closeLightbox();
+  else if (modal.classList.contains('open')) closeModal();
 });
+
+// ===== Lightbox (모달 갤러리 이미지 확대) =====
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.setAttribute('aria-hidden', 'true');
+lightbox.innerHTML = '<img alt="확대 이미지">';
+document.body.appendChild(lightbox);
+
+modalContent.addEventListener('click', (e) => {
+  const img = e.target.closest('.gallery-item img');
+  if (!img) return;
+  lightbox.querySelector('img').src = img.src;
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+}
+lightbox.addEventListener('click', closeLightbox);
 
 // ===== Theme toggle =====
 const themeToggle = document.getElementById('themeToggle');

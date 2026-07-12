@@ -459,7 +459,16 @@ a:focus-visible, button:focus-visible {
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .gallery.gallery-2 { grid-template-columns: 1fr 1fr; }
 .gallery-item { margin: 0; }
-.gallery-item img { width: 100%; display: block; border: 1px solid var(--border); border-radius: var(--radius); }
+.gallery-item img { width: 100%; display: block; border: 1px solid var(--border); border-radius: var(--radius); cursor: zoom-in; }
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000; display: none;
+  align-items: center; justify-content: center; padding: 24px;
+  background: rgb(0 0 0 / .85); cursor: zoom-out; /* 오버레이: 테마 무관 항상 검정 (스펙 토큰 예외) */
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: var(--radius); }
 .gallery-item figcaption { margin-top: 7px; font-size: 12px; line-height: 1.5; color: var(--muted-foreground); }
 .modal-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 .modal-link {
