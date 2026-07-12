@@ -17,8 +17,8 @@
   --input: oklch(0.94 0 0);
   --ring: oklch(0 0 0);
   --radius: 0.5rem;
-  --font-sans: Geist, "Pretendard Variable", Pretendard, sans-serif;
-  --font-mono: "Geist Mono", monospace;
+  --font-sans: "Geist Variable", "Pretendard Variable", Pretendard, sans-serif;
+  --font-mono: "Geist Mono Variable", monospace;
   --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18);
 }
 .dark {
