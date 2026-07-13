@@ -1,7 +1,7 @@
 // ===== State =====
 let works = [];
 let activeFilter = 'all';
-const featuredOrder = ['nongshim-caprisun', 'dalidam'];
+const featuredOrder = ['busan-bbolbbol-reels', 'nongshim-caprisun', 'dalidam'];
 
 const grid = document.getElementById('workGrid');
 const filtersEl = document.getElementById('filters');
