@@ -274,43 +274,43 @@ a:focus-visible, button:focus-visible {
 .activity-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
 .activity-grid::after { content: ""; flex: 0 0 1px; }
 .activity-card {
-  flex: 0 0 clamp(340px, 42vw, 430px); height: 560px; overflow-y: auto;
+  flex: 0 0 clamp(320px, 38vw, 390px); height: 460px; overflow-y: auto;
   scroll-snap-align: start; overscroll-behavior: contain;
-  display: flex; flex-direction: column; padding: 24px;
+  display: flex; flex-direction: column; padding: 22px;
   border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--card); color: var(--card-foreground);
 }
-.activity-period { margin-bottom: 10px; font-family: var(--font-mono); font-size: 13px; color: var(--muted-foreground); }
-.activity-card h3 { margin-bottom: 10px; font-size: 17px; font-weight: 700; line-height: 1.4; }
+.activity-period { margin-bottom: 8px; font-family: var(--font-mono); font-size: 13px; color: var(--muted-foreground); }
+.activity-card h3 { margin-bottom: 8px; font-size: 18px; font-weight: 700; line-height: 1.4; }
 .activity-card p { font-size: 14px; line-height: 1.7; color: var(--muted-foreground); }
-.activity-stari { list-style: none; display: grid; gap: 10px; margin-top: 14px; }
+.activity-stari { list-style: none; display: grid; gap: 8px; margin-top: 12px; }
 .activity-stari li {
-  display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start;
-  font-size: 13px; line-height: 1.55; color: var(--muted-foreground);
+  display: grid; grid-template-columns: 64px 1fr; gap: 8px; align-items: start;
+  font-size: 12px; line-height: 1.5; color: var(--muted-foreground);
 }
 .activity-stari strong {
   font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
   color: var(--muted-foreground);
 }
 .activity-stari span { min-width: 0; }
-.activity-work-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+.activity-work-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
 .activity-work-item {
-  border: 1px solid var(--border); border-radius: var(--radius); padding: 12px;
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; min-height: 108px;
 }
 .activity-work-item span {
   display: inline-block; margin-bottom: 8px; padding: 3px 8px; border-radius: 999px;
   background: var(--muted); color: var(--muted-foreground);
   font-family: var(--font-mono); font-size: 10px; text-transform: uppercase;
 }
-.activity-work-item strong { display: block; font-size: 13px; line-height: 1.45; }
-.activity-work-item p { margin-top: 7px; font-size: 12px; line-height: 1.55; color: var(--muted-foreground); }
-.activity-artifact { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.activity-work-item strong { display: block; font-size: 12px; line-height: 1.45; }
+.activity-work-item p { margin-top: 6px; font-size: 11px; line-height: 1.5; color: var(--muted-foreground); }
+.activity-artifact { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
 .activity-artifact-label {
   margin-bottom: 8px; font-family: var(--font-mono); font-size: 11px;
   text-transform: uppercase; color: var(--muted-foreground);
 }
 .activity-video {
-  width: 100%; max-width: 280px; aspect-ratio: 16 / 9; display: block; margin: 0 auto;
+  width: 100%; max-width: 240px; aspect-ratio: 16 / 9; display: block; margin: 0 auto;
   object-fit: cover; background: #000; /* 레터박스: 테마 무관 항상 검정 (스펙 토큰 예외) */
   border: 1px solid var(--border); border-radius: var(--radius);
 }
@@ -344,7 +344,7 @@ a:focus-visible, button:focus-visible {
 .activity-proposal-strip-wide a { flex-basis: 132px; width: 132px; aspect-ratio: 16 / 9; }
 .activity-proposal-strip img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  border: 1px solid var(--border); border-radius: 6px;
+  border: 1px solid var(--border); border-radius: 6px; background: var(--card);
 }
 
 /* ===== Skills ===== */
@@ -486,7 +486,7 @@ a:focus-visible, button:focus-visible {
   .process { grid-template-columns: repeat(2, 1fr); }
   .gallery { grid-template-columns: 1fr 1fr; }
   .activity-controls { margin-top: -44px; }
-  .activity-card { flex-basis: min(82vw, 390px); height: 540px; }
+  .activity-card { flex-basis: min(82vw, 390px); height: 440px; }
 }
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
@@ -502,7 +502,7 @@ a:focus-visible, button:focus-visible {
   .nav-links a { margin-left: 14px; font-size: 13px; }
   .theme-toggle { margin-left: 12px; }
   .activity-controls { margin: 0 0 14px; justify-content: flex-start; }
-  .activity-card { flex-basis: 86vw; height: 520px; padding: 20px; }
+  .activity-card { flex-basis: 86vw; height: 420px; padding: 20px; }
   .activity-work-list { grid-template-columns: 1fr; }
   .modal-dialog { margin: 0; min-height: 100vh; border-radius: 0; padding: 20px; }
   .modal-title { font-size: 22px; }
